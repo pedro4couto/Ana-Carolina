@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para o Amor da Minha Vida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #ffe6e6, #fff);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #ff99aa;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    section {
+      padding: 2rem 5%;
+    }
+
+    .message {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff0f5;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeIn 3s ease-in;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 3rem;
+      animation: fadeIn 4s ease-in;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #ffccd5;
+      text-align: center;
+      padding: 2rem;
+      font-size: 1rem;
+      color: #333;
+      margin-top: 4rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      position: fixed;
+      top: -50px;
+      font-size: 2rem;
+      color: #ff4d88;
+      animation: fall 5s linear infinite;
+      z-index: 999;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Música de fundo -->
+<audio controls>
+  <source src="1/Matias Damasio - Teu Olhar.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio HTML5.
+</audio>
+
+<!-- Corações caindo -->
+<script>
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    heart.innerText = "💖";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+  }
+  setInterval(createHeart, 300);
+</script>
+
+<header>
+  Para o Amor da Minha Vida 💖
+</header>
+
+<section class="message">
+  <h2>Meu amor,</h2>
+  <p>
+    <strong>És a menina mais especial que conheci até hoje.</strong>
+    <p>
+        O teu sorriso é encantador, os teus olhos brilham com uma luz única, e o teu abraço... é o lugar onde a minha alma encontra paz.   
+        Não és apenas bonita por fora — o mais incrível em ti é o teu coração.
+        És uma poesia viva, daquelas que nem os livros conseguem descrever, nem a mente ousa imaginar.
+    </p>
+    Contigo aprendi o verdadeiro significado de amar e ser amado.
+    O amor não vive só de momentos perfeitos — ele nasce da coragem de lutar, de ficar mesmo quando tudo parece difícil, e de crescer lado a lado, sem nunca desistir.
+</p>
+    <strong>Amo-te profundamente.</strong>
+  <p>
+    Amo-te com os meus medos, com as minhas falhas, com cada batida do meu coração.
+E tudo o que eu mais desejo... é fazer-te feliz em cada dia da minha existência.
+  </p>
+  <p>
+    <strong>Porque contigo, eu estarei sempre — de uma forma ou de outra,
+no tempo, no espaço, na vida... ou apenas no teu coração ❤️<strong>
+  </p>
+  <p style="text-align: right; margin-top: 2rem;"><em>Com todo o meu amor, <br> Pedro</em></p>
+</section>
+
+<section class="gallery">
+  <img src="2/12.jpeg" alt="Foto 1">
+  <img src="2/13.jpeg" alt="Foto 2">
+  <img src="2/14.jpeg" alt="Foto 3">
+  <img src="2/15.jpeg" alt="Foto 4">
+</section>
+
+<!-- Botão surpresa -->
+<section style="text-align: center; margin-top: 4rem;">
+  <button id="surpriseBtn" style="padding: 1rem 2rem; font-size: 1.2rem; border-radius: 30px; background-color: #ff4d88; color: white; border: none; cursor: pointer;">
+    Tenho uma pergunta para ti 💌
+  </button>
+</section>
+
+<!-- Caixa de pergunta -->
+<div id="questionBox" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 0 20px rgba(0,0,0,0.3); text-align: center; z-index: 999;">
+  <p style="font-size: 1.2rem;">Aceitas recomeçar? </p>
+  <button id="yesBtn" style="padding: 0.8rem 1.5rem; font-size: 1rem; margin: 1rem; background-color: #28a745; color: white; border: none; border-radius: 10px;">Sim 💖</button>
+  <button id="noBtn" style="padding: 0.8rem 1.5rem; font-size: 1rem; margin: 1rem; background-color: #dc3545; color: white; border: none; border-radius: 10px; position: relative;">Não 🙈</button>
+</div>
+
+<footer>
+  Feito com todo o amor do mundo para ti minha vida ❤️
+</footer>
+
+<!-- JavaScript da interação -->
+<script>
+  const surpriseBtn = document.getElementById('surpriseBtn');
+  const questionBox = document.getElementById('questionBox');
+  const yesBtn = document.getElementById('yesBtn');
+  const noBtn = document.getElementById('noBtn');
+
+  surpriseBtn.addEventListener('click', () => {
+    questionBox.style.display = 'block';
+  });
+
+  yesBtn.addEventListener('click', () => {
+    window.location.href = "surpresa.html"; // Redireciona para a página de surpresa
+  });
+
+  noBtn.addEventListener('mouseover', () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.position = 'absolute';
+    noBtn.style.left = `${x}px`;
+    noBtn.style.top = `${y}px`;
+  });
+</script>
+
+</body>
+</html>

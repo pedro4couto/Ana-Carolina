@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>O Nosso Para Sempre 💍</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #ffe6e6, #fff);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #ff99aa;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 2rem;
+      gap: 2rem;
+    }
+
+    .photo {
+      flex: 1 1 300px;
+    }
+
+    .photo img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .text {
+      flex: 1 1 300px;
+      max-width: 500px;
+      background: #fff0f5;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      font-size: 1.2rem;
+    }
+
+    .heart {
+      position: fixed;
+      top: -50px;
+      font-size: 2rem;
+      color: #ff4d88;
+      animation: fall 5s linear infinite;
+      z-index: 999;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Música de fundo -->
+<audio controls>
+  <source src="1/Matias Damasio - Teu Olhar.mp3" type="audio/mpeg">
+  O teu navegador não suporta áudio HTML5.
+</audio>
+
+<!-- Corações a cair -->
+<script>
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    heart.innerText = "💖";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+  }
+  setInterval(createHeart, 300);
+</script>
+
+<header>
+  O Nosso Para Sempre 💖
+</header>
+
+<div class="container">
+  <div class="photo">
+    <img src="2/16.jpeg" alt="Foto nossa">
+    <img src="2/17.gif" alt="GIF">
+
+  </div>
+  <div class="text">
+    <p>
+        Agora que aceitaste recomeçar e continuar o nosso amor, quero que te recordes do início,
+        de quando tudo era questionado por diversos motivos, e de todos os erros que ameaçaram a nossa caminhada.
+    </p>
+    <p>
+        Mas, mesmo assim, nada nem ninguém conseguiu destruir aquilo que era mais forte:
+        "o que só nós sentíamos".
+    </p>
+        Esta foi a nossa primeira foto, e ela ainda me provoca uma sensação que me dá um nó na barriga.
+    <p>
+        Vamos fazer com que essa sensação não se limite a uma simples foto, mas que seja constante sempre que estivermos juntos.
+        Vamos fazer melhor, ser melhores, deixar o passado para trás e focar no nosso futuro.
+    <p>
+        Não vais arrepender-te da tua decisão.
+    <p>
+        Hoje amo-te mais do que ontem, e amanhã vou amar-te ainda mais do que hoje.❤️
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
